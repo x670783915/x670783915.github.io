@@ -1,0 +1,959 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="记录自己的一路，以便不要迷失自己另外这篇文章应该只对我自己有阅读价值">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自己写的学java时写的代码">
+<meta property="og:url" content="http://yoursite.com/2016/08/12/03/index.html">
+<meta property="og:site_name" content="LXSBXHN">
+<meta property="og:description" content="记录自己的一路，以便不要迷失自己另外这篇文章应该只对我自己有阅读价值">
+<meta property="og:updated_time" content="2016-08-12T08:24:21.642Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自己写的学java时写的代码">
+<meta name="twitter:description" content="记录自己的一路，以便不要迷失自己另外这篇文章应该只对我自己有阅读价值">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/08/12/03/"/>
+
+  <title> 自己写的学java时写的代码 | LXSBXHN </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">LXSBXHN</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">你是不是又偷吃了我的西瓜</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                自己写的学java时写的代码
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-12T21:16:49+08:00" content="2016-08-12">
+              2016-08-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JAVA学习/" itemprop="url" rel="index">
+                    <span itemprop="name">JAVA学习</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>记录自己的一路，以便不要迷失自己<br>另外这篇文章应该只对我自己有阅读价值</p>
+<a id="more"></a>
+<pre><code>package test;
+import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.text.*;
+
+class FreshJuice{
+enum Freshsize  {SMALL , MEDUIM , LARGE};//枚举类型声明
+Freshsize size;//枚举类型使用
+}
+
+class people{
+static int age;//这样的话，people就只能通过类名直接调用，貌似不能实例化为一个变量
+public people(){
+    this.age = 100;
+    System.out.println(age);
+}
+static{
+    age++;
+    System.out.println(age);
+}
+}
+
+ class show{
+ public void showww(){
+    // byte  
+        System.out.println(&quot;基本类型：byte 二进制位数：&quot; + Byte.SIZE);  
+        System.out.println(&quot;包装类：java.lang.Byte&quot;);  
+        System.out.println(&quot;最小值：Byte.MIN_VALUE=&quot; + Byte.MIN_VALUE);  
+        System.out.println(&quot;最大值：Byte.MAX_VALUE=&quot; + Byte.MAX_VALUE);  
+        System.out.println();  
+
+        // short  
+        System.out.println(&quot;基本类型：short 二进制位数：&quot; + Short.SIZE);  
+        System.out.println(&quot;包装类：java.lang.Short&quot;);  
+        System.out.println(&quot;最小值：Short.MIN_VALUE=&quot; + Short.MIN_VALUE);  
+        System.out.println(&quot;最大值：Short.MAX_VALUE=&quot; + Short.MAX_VALUE);  
+        System.out.println();  
+
+        // int  
+        System.out.println(&quot;基本类型：int 二进制位数：&quot; + Integer.SIZE);  
+        System.out.println(&quot;包装类：java.lang.Integer&quot;);  
+        System.out.println(&quot;最小值：Integer.MIN_VALUE=&quot; + Integer.MIN_VALUE);  
+        System.out.println(&quot;最大值：Integer.MAX_VALUE=&quot; + Integer.MAX_VALUE);  
+        System.out.println();  
+
+        // long  
+        System.out.println(&quot;基本类型：long 二进制位数：&quot; + Long.SIZE);  
+        System.out.println(&quot;包装类：java.lang.Long&quot;);  
+        System.out.println(&quot;最小值：Long.MIN_VALUE=&quot; + Long.MIN_VALUE);  
+        System.out.println(&quot;最大值：Long.MAX_VALUE=&quot; + Long.MAX_VALUE);  
+        System.out.println();  
+
+        // float  
+        System.out.println(&quot;基本类型：float 二进制位数：&quot; + Float.SIZE);  
+        System.out.println(&quot;包装类：java.lang.Float&quot;);  
+        System.out.println(&quot;最小值：Float.MIN_VALUE=&quot; + Float.MIN_VALUE);  
+        System.out.println(&quot;最大值：Float.MAX_VALUE=&quot; + Float.MAX_VALUE);  
+        System.out.println();  
+
+        // double  
+        System.out.println(&quot;基本类型：double 二进制位数：&quot; + Double.SIZE);  
+        System.out.println(&quot;包装类：java.lang.Double&quot;);  
+        System.out.println(&quot;最小值：Double.MIN_VALUE=&quot; + Double.MIN_VALUE);  
+        System.out.println(&quot;最大值：Double.MAX_VALUE=&quot; + Double.MAX_VALUE);  
+        System.out.println();  
+
+        // char  
+        System.out.println(&quot;基本类型：char 二进制位数：&quot; + Character.SIZE);  
+        System.out.println(&quot;包装类：java.lang.Character&quot;);  
+        // 以数值形式而不是字符形式将Character.MIN_VALUE输出到控制台  
+        System.out.println(&quot;最小值：Character.MIN_VALUE=&quot;  
+                + (int) Character.MIN_VALUE);  
+        // 以数值形式而不是字符形式将Character.MAX_VALUE输出到控制台  
+        System.out.println(&quot;最大值：Character.MAX_VALUE=&quot;  
+                + (int) Character.MAX_VALUE);  
+     }
+}
+
+
+
+
+ class who{
+ private int key;//私有变量需要设置获取和调用函数
+ String word;
+
+ public who(String tell){
+     word = tell;//这里不需要this不知到为什么
+     System.out.println(word);
+ }
+
+ public void Setkey(int num){
+     key = num;
+ }
+
+ public void Showkey(){
+     System.out.println(key);
+ }
+
+
+ }
+// 
+// 
+// 
+ final class dieclass{//final类不能被继承
+
+ }
+
+
+
+
+
+class Cake extends Object{
+private int id ;
+
+public Cake(int id){
+this.id = id;
+    System.out.println(&quot;Cake &quot; + id + &quot; is created&quot;);
+}
+
+
+protected void finalize() throws java.lang.Throwable{
+    super.finalize();
+
+    System.out.println(&quot;Cake &quot; + id + &quot; is disposed&quot;);
+
+}
+
+}
+
+
+
+
+
+
+
+public class test1 {//一个文件中只能有一个public类
+
+public static int numcnt = 0;//static主要是为了把变量与对象区分开来
+
+protected static int getcnt(){
+    return  numcnt;
+}
+
+test1(){
+    ++numcnt;
+}
+//    
+//    
+//    
+public final void stu(){//子类可以继承，但是不能修改或者重写
+    System.out.println(&quot;我就是不能被修改&quot;);
+}
+
+
+public static void printArray(int[] Array){
+    for(int i=0;i&lt;Array.length;++i){
+        System.out.print(Array[i] + &quot;\n&quot;);
+    }
+}
+//    
+
+
+    public static void main (String[] args) {
+//        people.age = 10;//这里相当于实例化了people，所以执行了优先度高于构造函数的静态代码块
+//        System.out.println(people.age);
+//        
+//        who lx = new who(&quot;lx&quot;);
+//        lx.Setkey(19);
+//        lx.Showkey();
+//        
+//        
+//        System.out.println(test1.numcnt + &quot;    start    &quot;);//静态变量只能这样通过类名直接用
+//        
+//        for(int i=0;i&lt;500;++i){
+//            new test1(); //实例化也不会重新实例化静态变量
+//        }
+//        
+//        System.out.println(test1.numcnt + &quot;    end      &quot;);
+//        
+//        String name = &quot;jame&quot;;
+//        boolean check = name instanceof String; //check = true
+//        //   ( Object reference variable ) instanceOf  (class/interface type)
+//        //   instanceof 用于操做对象实例，检查一个对象是否是一个特定类型
+//        //如果被比较的对象兼容于右侧类型，改运算付仍然返回true
+//        
+//         int [] number = {10,20,30,40,50};
+//         
+//         for(int x : number){
+//             System.out.print( x + &quot;,&quot;);
+//         }
+//         System.out.println();
+
+//        char[] charArray = {&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;f&apos;,&apos;h&apos;};
+//        
+//        for(char c : charArray){
+//            System.out.print(c + &quot;\n&quot;);
+//        }
+//         
+//        Integer[] Arrayint = {1,2,3,589,100,6,13};
+//        
+//        printArray(Arrayint);
+//        
+//        Comparator cmp = new MyComparator(); //类似c、c++里面的定义cmp来控制排列顺序
+//        
+//        Arrays.sort(Arrayint);
+//        
+//        for(int a : Arrayint){
+//            System.out.print(a + &quot;\n&quot; );
+//        }
+//        
+//        Arrays.sort(Arrayint , cmp);
+//        
+//        
+//        System.out.print(&quot;\n\n\n&quot;);
+//        
+//        for(int a : Arrayint){
+//            System.out.print(a + &quot;\n&quot;);
+//        }
+
+//        Date dNow = new Date();
+//        
+//        SimpleDateFormat ft = 
+//        new SimpleDateFormat (&quot;E yyyy.MM.dd &apos;at&apos; hh:mm:ss a zzz&quot;);
+//        
+//        System.out.print(&quot;Current time : &quot; + ft.format(dNow));
+//        
+
+//        
+//        
+//        try{
+//            
+//            long start = System.currentTimeMillis();
+//            System.out.println(new Date() + &quot;\n&quot;);
+//            Thread.sleep(5*60*10);
+//            
+//            long end = System.currentTimeMillis();
+//            System.out.println(new Date() + &quot;\n&quot;);
+//            long diff = end - start;
+//            
+//            System.out.println(&quot;Diffenence is &quot; + diff);
+//            
+//        } catch (Exception e){
+//            System.out.println(&quot;Got a Exception&quot;);
+//        }
+//        
+
+//        Cake a11 = new Cake(1);
+//        Cake a22 = new Cake(2);
+//        Cake a33 = new Cake(3);
+//        a22 = a33 = null;
+//        System.gc();
+//        
+
+
+//        char c;
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+//        do{
+//            c = (char) br.read();
+//            System.out.println(c);
+//            
+//        }while(c != &apos;q&apos;);
+
+
+//        Scanner scan = new Scanner(System.in);
+
+
+//        String str1 = scan.nextLine();
+//        
+//        System.out.println(str1);
+
+//        int x;
+//        double y;
+//        
+//        x = scan.nextInt();
+//        y = scan.nextDouble();
+//        
+//        
+//        System.out.printf(&quot;%d %f\n&quot;, x,y);//输出浮点数只有%f就行了
+//        
+//        
+//        
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+public static void printmax(double... number){
+    if(number.length == 0) System.out.println(&quot;error!&quot;);
+
+
+    double maxx = number[0];
+
+    for(int i=1;i&lt;number.length;i++){
+        maxx = Math.max(maxx , number[i]);
+    }
+
+    System.out.println(maxx);
+}
+
+
+
+
+
+
+}
+
+
+//一个类不能同时被final和abstract修饰
+abstract class Carven{//抽象类，声明抽象类的唯一目的就是为了以后将该类进行扩充
+private double price;
+private String model;
+private String year;
+public abstract void goFist();//如果一个类的方法是抽象的，那么这个类也必须定义为抽象的，否则编译错误
+public abstract void changColor();//不能声明成final或者strict
+public void showww(){};//抽象类可以包含抽象方法和非抽象方法
+}  //抽象类的使用就是通过子类继承，继承后必须实现所有父类的抽象方法
+
+
+
+
+class MyComparator implements Comparator&lt;Integer&gt;{
+
+@Override
+public int compare(Integer arg0, Integer arg1) {
+    if(arg0 &lt; arg1) return -1; //貌似要想达到什么样子的排序就是返回-1，这样好记忆些
+    else if(arg0 == arg1) return 0;//0是不变位置
+    else return 1;//返回负值就会对调
+}
+
+}
+
+
+
+
+
+/*final 
+ * 为了保证内容不被修改
+ * 类似于c\c++里的const
+ * 
+ */
+/*
+ * java 修饰符
+ * 可访问修饰符 ：default , public , protected , private
+ * 不可访问修饰符：final , abstract 
+*/
+</code></pre><p>基础的已学完，可能上面有些代码被我自己删掉了，而这篇文章也只有我个人的阅读价值</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/02/01/" rel="next" title="HDU 5791 Two">
+                <i class="fa fa-chevron-left"></i> HDU 5791 Two
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/12/04/" rel="prev" title="JAVA里怎么把一个字符串里的特定子串删除">
+                JAVA里怎么把一个字符串里的特定子串删除 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/xiao.png"
+               alt="LX" />
+          <p class="site-author-name" itemprop="name">LX</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/o670783915" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  CSDN
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LX</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

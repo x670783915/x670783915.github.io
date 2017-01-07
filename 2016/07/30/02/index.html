@@ -1,0 +1,625 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="动态规划," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="写这个报告的目的是提醒自己，自己曾经爆0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="XTU算法专题个人赛3 （DP专题）解题报告">
+<meta property="og:url" content="http://yoursite.com/2016/07/30/02/index.html">
+<meta property="og:site_name" content="LXSBXHN">
+<meta property="og:description" content="写这个报告的目的是提醒自己，自己曾经爆0">
+<meta property="og:updated_time" content="2016-08-12T08:11:14.729Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="XTU算法专题个人赛3 （DP专题）解题报告">
+<meta name="twitter:description" content="写这个报告的目的是提醒自己，自己曾经爆0">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/07/30/02/"/>
+
+  <title> XTU算法专题个人赛3 （DP专题）解题报告 | LXSBXHN </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">LXSBXHN</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">你是不是又偷吃了我的西瓜</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                XTU算法专题个人赛3 （DP专题）解题报告
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-30T21:16:49+08:00" content="2016-07-30">
+              2016-07-30
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/ACM之路/" itemprop="url" rel="index">
+                    <span itemprop="name">ACM之路</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>写这个报告的目的是提醒自己，自己曾经爆0</p>
+<a id="more"></a>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1176" target="_blank" rel="external">第一题 HDU1176 免费馅饼</a></p>
+<p>很容易想到dp[时间][位置]</p>
+<p>递归方程很简单，而我为什么没写出来呢。<br>想想当时我一直卡在怎么存数据哪里，递归什么都想出来了。<br>为什么卡在存数据哪里<br>智商······<br>最后注意一下初始化</p>
+<p>AC代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">#include &lt;cstring&gt;</div><div class="line">#include &lt;cstdio&gt;</div><div class="line">#include &lt;cmath&gt;</div><div class="line">#include &lt;algorithm&gt;</div><div class="line">using namespace std;</div><div class="line">int pos[100010][11];</div><div class="line">int dp[100010][11];</div><div class="line">const int inf = 0x3f3f3f3f;</div><div class="line">int maxt(int x,int y)</div><div class="line">&#123;</div><div class="line">    if(y==0) return max(dp[x][y],dp[x][y+1]);</div><div class="line">    if(y==10) return max(dp[x][y],dp[x][y-1]);</div><div class="line">    return max(max(dp[x][y],dp[x][y+1]),dp[x][y-1]);</div><div class="line">&#125;</div><div class="line"></div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    int n;</div><div class="line">    while(scanf(&quot;%d&quot;,&amp;n)&amp;&amp;n)&#123;</div><div class="line">        memset(pos,0,sizeof(pos));</div><div class="line">        for(int i=0,x,y;i&lt;n;i++)&#123;</div><div class="line">            scanf(&quot;%d%d&quot;,&amp;x,&amp;y);</div><div class="line">            pos[y][x]++;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        memset(dp,0,sizeof(dp));</div><div class="line">        for(int i=0;i&lt;=100000;i++) for(int j=0;j&lt;=10;j++) dp[i][j] = -inf;</div><div class="line">        dp[0][5] = 0;</div><div class="line">        for(int i=1;i&lt;=100000;i++)&#123;</div><div class="line">            for(int j=0;j&lt;=10;j++)&#123;</div><div class="line">                dp[i][j] = maxt(i-1,j) + pos[i][j];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        int ans = 0;</div><div class="line">        for(int i=0;i&lt;=10;i++) ans = max(ans,dp[100000][i]);</div><div class="line">        printf(&quot;%d\n&quot;,ans);</div><div class="line">    &#125;</div><div class="line">    return 0;</div><div class="line"></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1428" target="_blank" rel="external">第二道 HDU 1428 漫步校园</a></p>
+<p>这道题说是简单，但是自己总是错在一些小细节上。<br>并且，当时第三题卡了，心情一直不好。<br>我觉得这个是不应该的，是个人问题。<br>这题我当时好好看是会做的。</p>
+<p>就是首先BFS一遍把每个点到终点的最远距离记录下来。<br>然后DFS记忆化搜索时剪支就行了。</p>
+<p>下面是代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div></pre></td><td class="code"><pre><div class="line">#include &lt;cstring&gt;</div><div class="line">#include &lt;cstdio&gt;</div><div class="line">#include &lt;cmath&gt;</div><div class="line">#include &lt;algorithm&gt;</div><div class="line">#include &lt;queue&gt;</div><div class="line">using namespace std;</div><div class="line">long long mp[101][101];</div><div class="line">long long dp[101][101];</div><div class="line">const int dx[] = &#123;0,0,1,-1&#125;;</div><div class="line">const int dy[] = &#123;1,-1,0,0&#125;;</div><div class="line">int vis[51][51];</div><div class="line">int n;</div><div class="line"></div><div class="line"></div><div class="line">struct po</div><div class="line">&#123;</div><div class="line">    int x,y,v;</div><div class="line">    friend bool operator &lt; (const po a,const po b)&#123;</div><div class="line">        return a.v &gt; b.v;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">void bfs()</div><div class="line">&#123;</div><div class="line">    memset(vis,0,sizeof(vis));</div><div class="line">    po a = &#123;n-1,n-1,mp[n-1][n-1]&#125;;</div><div class="line">    vis[n-1][n-1] = 1;</div><div class="line">    priority_queue&lt;po&gt; q;</div><div class="line">    q.push(a);</div><div class="line">    while(!q.empty())&#123;</div><div class="line">        po v = q.top();q.pop();</div><div class="line">        for(int i=0;i&lt;4;i++)&#123;</div><div class="line">            int xn = v.x + dx[i];</div><div class="line">            int yn = v.y + dy[i];</div><div class="line">            if(xn &lt; 0 || yn &lt; 0 || xn &gt;=n || yn &gt;= n) continue;</div><div class="line">            if(vis[xn][yn]) continue;</div><div class="line">            vis[xn][yn] = 1;</div><div class="line">            int vn = v.v + mp[xn][yn];</div><div class="line">            po u = &#123;xn,yn,vn&#125;;</div><div class="line">            mp[xn][yn] = vn;</div><div class="line">            q.push(u);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">long long dfs(long long x,long long y)</div><div class="line">&#123;</div><div class="line">    long long  ans = 0;</div><div class="line">    if(!dp[x][y])&#123;</div><div class="line">        for(int i=0;i&lt;4;i++)&#123;</div><div class="line">            int xn = x + dx[i];</div><div class="line">            int yn = y + dy[i];</div><div class="line">            if(xn &lt;  0 || yn &lt; 0 || xn &gt;= n || yn &gt;=n) continue;</div><div class="line">            if(mp[xn][yn] &gt;= mp[x][y]) continue;</div><div class="line">            ans += dfs(xn,yn);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        dp[x][y] = ans;</div><div class="line">    &#125;</div><div class="line">    return dp[x][y];</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    while(~scanf(&quot;%d&quot;,&amp;n))&#123;</div><div class="line">        memset(dp,0,sizeof(dp));</div><div class="line">        for(int i=0;i&lt;n;i++)&#123;</div><div class="line">            for(int j=0;j&lt;n;j++)&#123;</div><div class="line">                scanf(&quot;%lld&quot;,&amp;mp[i][j]);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        bfs();</div><div class="line">        dp[n-1][n-1] = 1;</div><div class="line">        long long ans = dfs(0,0);</div><div class="line">        printf(&quot;%lld\n&quot;,ans);</div><div class="line">    &#125;</div><div class="line">    return 0;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5410" target="_blank" rel="external">第三题  HDU 5410 CRB and His Birthday </a></p>
+<p>这道题是我最大的失败，明明知道要把A[i] 和 B[i] 分开，但是为什么一直没想出来</p>
+<p>首先得想出来取任何一个物品都会得到一个B<br>这样的话，我们就可以把A[i] + B[i]看成是一个01背包<br>然后再对 A[i] 进行完全背包</p>
+<p>下面是代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">#include &lt;cstring&gt;</div><div class="line">#include &lt;cstdio&gt;</div><div class="line">#include &lt;cmath&gt;</div><div class="line">#include &lt;algorithm&gt;</div><div class="line">using namespace std;</div><div class="line"></div><div class="line"></div><div class="line">int a[2020],b[2020],w[2020];</div><div class="line">int dp[2020];</div><div class="line"></div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    int t;</div><div class="line">    scanf(&quot;%d&quot;,&amp;t);</div><div class="line">    while(t--)&#123;</div><div class="line">        int m,n;</div><div class="line">        scanf(&quot;%d%d&quot;,&amp;m,&amp;n);</div><div class="line">        for(int i=0;i&lt;n;i++) scanf(&quot;%d%d%d&quot;,&amp;w[i],&amp;a[i],&amp;b[i]);</div><div class="line">        memset(dp,0,sizeof(dp));</div><div class="line"></div><div class="line">        for(int i=0;i&lt;n;i++)&#123;</div><div class="line">            for(int j=m;j&gt;=w[i];j--)&#123;</div><div class="line">                dp[j] = max(dp[j-w[i]] + a[i] + b[i] ,dp[j]);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        for(int i=0;i&lt;n;i++)&#123;</div><div class="line">            for(int j=w[i];j&lt;=m;j++)&#123;</div><div class="line">                dp[j] = max(dp[j],dp[j-w[i]] + a[i]);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        printf(&quot;%d\n&quot;,dp[m]);</div><div class="line">    &#125;</div><div class="line">    return 0;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><a href="http://acm.hust.edu.cn/vjudge/problem/165142/origin" target="_blank" rel="external">第四题 CodeForces 543A     Writing Code</a></p>
+<p>这题主要完成一个转换，一开始定义dp[前i个程序员][写了j行代码][犯了k个错]</p>
+<p>递推方程就知道很简单了，但是这样会错，还要优化。<br>仔细一看就知道可以优化成dp[写了j行代码][犯了k个错]</p>
+<p>下面是代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">#include &lt;cstring&gt;</div><div class="line">#include &lt;cstdio&gt;</div><div class="line">#include &lt;cmath&gt;</div><div class="line">#include &lt;algorithm&gt;</div><div class="line">using namespace std;</div><div class="line"></div><div class="line"></div><div class="line">int a[510];</div><div class="line">int dp[510][510];</div><div class="line"></div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    int n,m,b,mod;</div><div class="line">    scanf(&quot;%d%d%d%d&quot;,&amp;n,&amp;m,&amp;b,&amp;mod);</div><div class="line">    memset(dp,0,sizeof(dp));</div><div class="line">    for(int i=1;i&lt;=n;i++) scanf(&quot;%d&quot;,&amp;a[i]);</div><div class="line">    dp[0][0] = 1;</div><div class="line"></div><div class="line">    for(int i=1;i&lt;=n;i++)&#123;</div><div class="line">        for(int j=1;j&lt;=m;j++)&#123;</div><div class="line">            for(int k = a[i];k&lt;=b;k++)&#123;</div><div class="line">                dp[j][k] += dp[j-1][k-a[i]];</div><div class="line">                dp[j][k] %= mod;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    int ans = 0;</div><div class="line">    for(int i=0;i&lt;=b;i++)&#123;</div><div class="line">        ans += dp[m][i] ;</div><div class="line">        ans %= mod;</div><div class="line">    &#125;</div><div class="line">    printf(&quot;%d\n&quot;,ans);</div><div class="line">    return 0;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5418" target="_blank" rel="external">第五题 HDU 5418     Victor and World</a></p>
+<p>这题需要状态压缩，并且用floyd算法先算出每个点到另外一个地方的最小距离，因为你中途经过那些点答案并不需要你输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line">#include &lt;cstring&gt;</div><div class="line">#include &lt;cstdio&gt;</div><div class="line">#include &lt;cmath&gt;</div><div class="line">#include &lt;algorithm&gt;</div><div class="line">#include &lt;queue&gt;</div><div class="line">#define inf 0x1f1f1f1f</div><div class="line">using namespace std;</div><div class="line"></div><div class="line"></div><div class="line">int dp[(1&lt;&lt;17)][20];</div><div class="line">int mp[20][20];</div><div class="line"></div><div class="line"></div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    int t;</div><div class="line">    scanf(&quot;%d&quot;,&amp;t);</div><div class="line">    while(t--)&#123;</div><div class="line">        int n,m;</div><div class="line">        scanf(&quot;%d%d&quot;,&amp;n,&amp;m);</div><div class="line">        memset(dp,0x3f,sizeof(dp));</div><div class="line">        for(int i=1;i&lt;=n;i++)&#123;</div><div class="line">            mp[i][i] = 0;</div><div class="line">            for(int j=1;j&lt;=n;j++)&#123;</div><div class="line">                if(i!=j) mp[i][j] = inf;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        for(int i=0,x,y,z;i&lt;m;i++)&#123;</div><div class="line">            scanf(&quot;%d%d%d&quot;,&amp;x,&amp;y,&amp;z);</div><div class="line">            if(mp[x][y]&gt;z) mp[x][y] = mp[y][x] = z;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        dp[1][1] = 0;</div><div class="line">        for(int i=1;i&lt;=n;i++)</div><div class="line">        for(int j=1;j&lt;=n;j++)</div><div class="line">        for(int k=1;k&lt;=n;k++) mp[j][k] = min(mp[j][k] , mp[j][i] + mp[i][k]);</div><div class="line"></div><div class="line">        int tot = (1&lt;&lt;n)-1;</div><div class="line">        for(int i=1;i&lt;=tot;i++)&#123;</div><div class="line">            for(int j=1;j&lt;=n;j++)&#123; // st</div><div class="line">                if(i&amp;(1&lt;&lt;(j-1)))&#123;</div><div class="line">                    for(int k=1;k&lt;=n;k++)&#123;</div><div class="line">                        if(k==j) continue;</div><div class="line">                        if(i&amp;(1&lt;&lt;(k-1))) continue;</div><div class="line">                        else dp[i | (1&lt;&lt;(k-1))][k] = min(dp[i | (1&lt;&lt;(k-1))][k] , dp[i][j] + mp[j][k]);</div><div class="line">                        //printf(&quot;%d\n&quot;,dp[i][k]);</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        int ans = inf;</div><div class="line">        for(int i=1;i&lt;=n;i++) ans = min(ans, dp[tot][i] + mp[i][1]);</div><div class="line">        printf(&quot;%d\n&quot;,ans);</div><div class="line">        &#125;</div><div class="line">        return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/动态规划/" rel="tag">#动态规划</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/02/test/" rel="prev" title="我的blog说明">
+                我的blog说明 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/xiao.png"
+               alt="LX" />
+          <p class="site-author-name" itemprop="name">LX</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/o670783915" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  CSDN
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LX</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
